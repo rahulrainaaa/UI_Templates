@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_user_registration"
+    app:startDestination="@id/personal_detail_fragment">
+
+    <fragment
+        android:id="@+id/personal_detail_fragment"
+        android:name="demo.raina.uitemplates.userRegisterWizard.PersonalDetailFragment"
+        android:label="@string/personal_detail"
+        tools:layout="@layout/frag_personal_detail">
+
+        <action
+            android:id="@+id/personal_detail_to_id_proof_fragment"
+            app:destination="@id/user_id_proof_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/user_id_proof_fragment"
+        android:name="demo.raina.uitemplates.userRegisterWizard.UserIdProofFragment"
+        android:label="@string/id_proof"
+        tools:layout="@layout/frag_user_id_proof" />
+</navigation>

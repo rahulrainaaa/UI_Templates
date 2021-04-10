@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">UI Templates</string>
+    <string name="title_activity_user_registration">New User Details</string>
+
+    <string name="personal_detail">Personal Detail</string>
+    <string name="id_proof">ID Proof</string>
+    <string name="pan">PAN</string>
+    <string name="aadhar">Aadhar</string>
+
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="name">Name</string>
+    <string name="mobile">Mobile</string>
+    <string name="email">Email</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <!-- TextInputEditText validations -->
+    <string name="validation_alpha_space">abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+    <string name="validation_alpha_numeric">1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+    <string name="validation_number_only">1234567890</string>
+    <integer name="validation_name_length">40</integer>
+    <integer name="validation_mobile_length">10</integer>
+    <integer name="validation_email_length">40</integer>
+    <integer name="validation_pan_length">10</integer>
+    <integer name="validation_aadhar_length">12</integer>
+
+</resources>
