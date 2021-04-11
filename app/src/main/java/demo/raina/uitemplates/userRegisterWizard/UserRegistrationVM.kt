@@ -20,6 +20,13 @@ class UserRegistrationVM : ViewModel() {
     val _panNumber = MutableLiveData<String>()
     val _uidaiNumber = MutableLiveData<String>()
 
+    //Error Messages.
+    val _errName = MutableLiveData<String>()
+    val _errMobile = MutableLiveData<String>()
+    val _errEmail = MutableLiveData<String>()
+    val _errPanNumber = MutableLiveData<String>()
+    val _errUidai = MutableLiveData<String>()
+
     fun registerNewUser() {
 
     }

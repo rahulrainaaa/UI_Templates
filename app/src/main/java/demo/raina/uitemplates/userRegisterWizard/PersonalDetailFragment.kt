@@ -20,7 +20,15 @@ class PersonalDetailFragment : Fragment() {
         binding = FragPersonalDetailBinding.inflate(inflater, container, false)
         userRegistrationVM = ViewModelProvider(requireActivity()).get(UserRegistrationVM::class.java)
         binding.vm = userRegistrationVM
+        setObservers()
         return binding.root
     }
+
+    private fun setObservers() {
+        userRegistrationVM._errName.observe(requireActivity()) { strErrorMsg -> binding.ipLayoutName.error = strErrorMsg }
+        userRegistrationVM._errMobile.observe(requireActivity()) { strErrorMsg -> binding.ipLayoutMobile.error = strErrorMsg }
+        userRegistrationVM._errEmail.observe(requireActivity()) { strErrorMsg -> binding.ipLayoutEmail.error = strErrorMsg }
+    }
+
 
 }

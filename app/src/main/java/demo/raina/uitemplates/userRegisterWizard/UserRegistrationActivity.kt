@@ -61,7 +61,29 @@ class UserRegistrationActivity : AppCompatActivity() {
                     Toast.makeText(this, R.string.accept_the_terms, Toast.LENGTH_SHORT).show()
             }
             R.id.personal_detail_fragment -> {
-                navController.navigate(R.id.personal_detail_to_id_proof_fragment)
+                var isPersonalDataValidInput = true
+                if (userRegistrationVM._name.value.isNullOrBlank()) {
+                    isPersonalDataValidInput = false
+                    userRegistrationVM._errName.postValue(getString(R.string.cannot_be_blank))
+                } else {
+                    userRegistrationVM._errName.postValue(null)
+                }
+
+                if (userRegistrationVM._mobile.value.isNullOrBlank() || userRegistrationVM._mobile.value?.trim()?.length != 10) {
+                    isPersonalDataValidInput = false
+                    userRegistrationVM._errMobile.postValue(getString(R.string.enter_mobile_number))
+                } else {
+                    userRegistrationVM._errMobile.postValue(null)
+                }
+
+                if (userRegistrationVM._email.value.isNullOrBlank()) {
+                    isPersonalDataValidInput = false
+                    userRegistrationVM._errEmail.postValue(getString(R.string.email_required))
+                } else {
+                    userRegistrationVM._errEmail.postValue(null)
+                }
+
+                if (isPersonalDataValidInput) navController.navigate(R.id.personal_detail_to_id_proof_fragment)
             }
             R.id.user_id_proof_fragment -> {
             }

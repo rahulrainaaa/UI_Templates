@@ -6,6 +6,9 @@
 
     <!-- messages -->
     <string name="accept_the_terms">Accept the Terms</string>
+    <string name="cannot_be_blank">Cannot be blank</string>
+    <string name="email_required">Email required for registration</string>
+    <string name="enter_mobile_number">Enter 10 digit mobile number</string>
     <string name="save_details">Save Details</string>
 
     <!-- Label and fields -->

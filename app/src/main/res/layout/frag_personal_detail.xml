@@ -28,6 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Name"
+            app:boxStrokeErrorColor="@android:color/holo_red_dark"
             app:counterEnabled="true"
             app:counterMaxLength="@integer/validation_name_length"
             app:layout_constraintEnd_toEndOf="parent"
@@ -72,7 +73,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/ic_layout_email"
+            android:id="@+id/ip_layout_email"
             style="@style/Theme.UITemplates.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
