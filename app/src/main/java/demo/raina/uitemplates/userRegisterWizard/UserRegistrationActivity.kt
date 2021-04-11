@@ -2,6 +2,7 @@ package demo.raina.uitemplates.userRegisterWizard
 
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
@@ -44,7 +45,17 @@ class UserRegistrationActivity : AppCompatActivity() {
 
     private fun btnFragmentNavigationClick() {
 
-        findNavController(R.id.nav_host_fragment).navigate(R.id.personal_detail_to_id_proof_fragment)
+        val navController = findNavController(R.id.nav_host_fragment)
+        when (navController.currentDestination?.id) {
+            R.id.personal_detail_fragment -> {
+                Toast.makeText(applicationContext, "Personal Detail Saved", Toast.LENGTH_SHORT).show()
+                navController.navigate(R.id.personal_detail_to_id_proof_fragment)
+            }
+            R.id.user_id_proof_fragment -> {
+                Toast.makeText(applicationContext, "ID Proof Verification: Under Dev", Toast.LENGTH_SHORT).show()
+            }
+        }
+
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
