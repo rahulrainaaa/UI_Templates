@@ -63,4 +63,10 @@
 
     <style name="Theme.UITemplates.TextInputLayout.OutlinedBox" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox" />
 
+    <style name="Theme.UITemplates.CheckBox" parent="Widget.MaterialComponents.CompoundButton.CheckBox">
+        <item name="drawableTint">?attr/colorPrimary</item>
+        <item name="rippleColor">?attr/colorPrimary</item>
+        <item name="buttonTint">?attr/colorPrimary</item>
+    </style>
+
 </resources>

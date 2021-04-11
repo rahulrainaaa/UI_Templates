@@ -27,7 +27,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:startIconDrawable="@drawable/ic_mobile">
+            app:startIconDrawable="@drawable/ic_pan">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -35,7 +35,8 @@
                 android:digits="@string/validation_alpha_numeric"
                 android:maxLength="@integer/validation_pan_length"
                 android:maxLines="1"
-                android:singleLine="true" />
+                android:singleLine="true"
+                android:text="@={vm._panNumber}" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -51,7 +52,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/ip_layout_pan"
-            app:startIconDrawable="@drawable/ic_mobile">
+            app:startIconDrawable="@drawable/ic_finger_print">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -59,7 +60,8 @@
                 android:digits="@string/validation_number_only"
                 android:maxLength="@integer/validation_aadhar_length"
                 android:maxLines="1"
-                android:singleLine="true" />
+                android:singleLine="true"
+                android:text="@={vm._uidaiNumber}" />
 
         </com.google.android.material.textfield.TextInputLayout>
 

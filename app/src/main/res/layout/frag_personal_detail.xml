@@ -41,7 +41,8 @@
                 android:digits="@string/validation_alpha_space"
                 android:maxLength="@integer/validation_name_length"
                 android:maxLines="1"
-                android:singleLine="true" />
+                android:singleLine="true"
+                android:text="@={vm._name}" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -50,12 +51,12 @@
             style="@style/Theme.UITemplates.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
             android:hint="@string/mobile"
             app:counterEnabled="true"
             app:counterMaxLength="@integer/validation_mobile_length"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="4dp"
             app:layout_constraintTop_toBottomOf="@id/ip_layout_name"
             app:startIconDrawable="@drawable/ic_mobile">
 
@@ -65,7 +66,8 @@
                 android:digits="@string/validation_number_only"
                 android:maxLength="@integer/validation_mobile_length"
                 android:maxLines="1"
-                android:singleLine="true" />
+                android:singleLine="true"
+                android:text="@={vm._mobile}" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -74,10 +76,10 @@
             style="@style/Theme.UITemplates.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
             android:hint="@string/email"
             app:counterEnabled="true"
             app:counterMaxLength="@integer/validation_email_length"
-            android:layout_marginTop="4dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/ip_layout_mobile"
@@ -88,7 +90,8 @@
                 android:layout_height="wrap_content"
                 android:maxLength="@integer/validation_email_length"
                 android:maxLines="1"
-                android:singleLine="true" />
+                android:singleLine="true"
+                android:text="@={vm._email}" />
 
         </com.google.android.material.textfield.TextInputLayout>
 

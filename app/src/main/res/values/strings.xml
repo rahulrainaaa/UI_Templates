@@ -1,22 +1,26 @@
 <resources>
+
+    <!-- Titles and Text -->
     <string name="app_name">UI Templates</string>
     <string name="title_activity_user_registration">New User Details</string>
 
+    <!-- messages -->
+    <string name="accept_the_terms">Accept the Terms</string>
+    <string name="save_details">Save Details</string>
+
+    <!-- Label and fields -->
     <string name="personal_detail">Personal Detail</string>
     <string name="terms">Terms</string>
+    <string name="accepted">Accepted</string>
     <string name="id_proof">ID Proof</string>
-    <string name="pan">PAN</string>
-    <string name="aadhar">Aadhar</string>
-
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
     <string name="name">Name</string>
     <string name="mobile">Mobile</string>
     <string name="email">Email</string>
-
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="accept_the_terms">Accept the Terms</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="pan">PAN</string>
+    <string name="aadhar">Aadhar</string>
+    <string name="verify_id">Verify ID</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
 
     <!-- TextInputEditText validations -->
     <string name="validation_alpha_space">abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ</string>

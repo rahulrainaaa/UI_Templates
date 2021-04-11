@@ -32,15 +32,18 @@ class UserRegistrationActivity : AppCompatActivity() {
         findNavController(R.id.nav_host_fragment).addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {
                 R.id.terms_accept_fragment -> {
-                    binding.includeLayout.btnFragmentNavigation.text = "Accept Terms"
+                    binding.toolbar.title = getString(R.string.terms)
+                    binding.includeLayout.btnFragmentNavigation.text = getString(R.string.accepted)
                     supportActionBar?.setDisplayHomeAsUpEnabled(false)
                 }
                 R.id.personal_detail_fragment -> {
-                    binding.includeLayout.btnFragmentNavigation.text = "Save Details"
+                    binding.toolbar.title = getString(R.string.personal_detail)
+                    binding.includeLayout.btnFragmentNavigation.text = getString(R.string.save_details)
                     supportActionBar?.setDisplayHomeAsUpEnabled(true)
                 }
                 R.id.user_id_proof_fragment -> {
-                    binding.includeLayout.btnFragmentNavigation.text = "Verify ID"
+                    binding.toolbar.title = getString(R.string.id_proof)
+                    binding.includeLayout.btnFragmentNavigation.text = getString(R.string.verify_id)
                     supportActionBar?.setDisplayHomeAsUpEnabled(true)
                 }
             }
