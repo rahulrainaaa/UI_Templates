@@ -8,13 +8,19 @@ import androidx.lifecycle.ViewModel
  */
 class UserRegistrationVM : ViewModel() {
 
-    private val _name = MutableLiveData<String>()
-    private val _mobile = MutableLiveData<String>()
-    private val _email = MutableLiveData<String>()
-    private val _panNumber = MutableLiveData<String>()
-    private val _uidaiNumber = MutableLiveData<String>()
+    //Accepted terms.
+    val _checked = MutableLiveData(false)
+
+    // Personal input details.
+    val _name = MutableLiveData<String>()
+    val _mobile = MutableLiveData<String>()
+    val _email = MutableLiveData<String>()
+
+    // ID Proof input details.
+    val _panNumber = MutableLiveData<String>()
+    val _uidaiNumber = MutableLiveData<String>()
 
     fun registerNewUser() {
-        
+
     }
 }

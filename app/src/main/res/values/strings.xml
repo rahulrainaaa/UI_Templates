@@ -3,6 +3,7 @@
     <string name="title_activity_user_registration">New User Details</string>
 
     <string name="personal_detail">Personal Detail</string>
+    <string name="terms">Terms</string>
     <string name="id_proof">ID Proof</string>
     <string name="pan">PAN</string>
     <string name="aadhar">Aadhar</string>
@@ -14,6 +15,7 @@
     <string name="email">Email</string>
 
     <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="accept_the_terms">Accept the Terms</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 
     <!-- TextInputEditText validations -->

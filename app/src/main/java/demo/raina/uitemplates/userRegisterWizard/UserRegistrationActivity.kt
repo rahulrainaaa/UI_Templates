@@ -28,15 +28,19 @@ class UserRegistrationActivity : AppCompatActivity() {
         binding.vm = userRegistrationVM
         binding.includeLayout.btnFragmentNavigation.setOnClickListener { btnFragmentNavigationClick() }
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        findNavController(R.id.nav_host_fragment).addOnDestinationChangedListener { controller, destination, arguments ->
 
+        findNavController(R.id.nav_host_fragment).addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {
-                R.id.personal_detail_fragment -> {
-                    binding.includeLayout.btnFragmentNavigation.text = "Save Details"
+                R.id.terms_accept_fragment -> {
+                    binding.includeLayout.btnFragmentNavigation.text = "Accept Terms"
                     supportActionBar?.setDisplayHomeAsUpEnabled(false)
                 }
+                R.id.personal_detail_fragment -> {
+                    binding.includeLayout.btnFragmentNavigation.text = "Save Details"
+                    supportActionBar?.setDisplayHomeAsUpEnabled(true)
+                }
                 R.id.user_id_proof_fragment -> {
-                    binding.includeLayout.btnFragmentNavigation.text = "Verify Details"
+                    binding.includeLayout.btnFragmentNavigation.text = "Verify ID"
                     supportActionBar?.setDisplayHomeAsUpEnabled(true)
                 }
             }
@@ -47,15 +51,18 @@ class UserRegistrationActivity : AppCompatActivity() {
 
         val navController = findNavController(R.id.nav_host_fragment)
         when (navController.currentDestination?.id) {
+            R.id.terms_accept_fragment -> {
+                if (userRegistrationVM._checked.value == true)
+                    navController.navigate(R.id.terms_accept_to_personal_detail_fragment)
+                else
+                    Toast.makeText(this, R.string.accept_the_terms, Toast.LENGTH_SHORT).show()
+            }
             R.id.personal_detail_fragment -> {
-                Toast.makeText(applicationContext, "Personal Detail Saved", Toast.LENGTH_SHORT).show()
                 navController.navigate(R.id.personal_detail_to_id_proof_fragment)
             }
             R.id.user_id_proof_fragment -> {
-                Toast.makeText(applicationContext, "ID Proof Verification: Under Dev", Toast.LENGTH_SHORT).show()
             }
         }
-
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

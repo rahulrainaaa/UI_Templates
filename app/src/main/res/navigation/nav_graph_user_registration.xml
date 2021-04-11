@@ -3,7 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph_user_registration"
-    app:startDestination="@id/personal_detail_fragment">
+    app:startDestination="@id/terms_accept_fragment">
+
+    <fragment
+        android:id="@+id/terms_accept_fragment"
+        android:name="demo.raina.uitemplates.userRegisterWizard.TermsAcceptFragment"
+        android:label="@string/terms"
+        tools:layout="@layout/frag_terms_accept">
+
+        <action
+            android:id="@+id/terms_accept_to_personal_detail_fragment"
+            app:destination="@id/personal_detail_fragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+    </fragment>
 
     <fragment
         android:id="@+id/personal_detail_fragment"
@@ -19,9 +34,11 @@
             app:popEnterAnim="@anim/slide_in_right"
             app:popExitAnim="@anim/slide_out_left" />
     </fragment>
+
     <fragment
         android:id="@+id/user_id_proof_fragment"
         android:name="demo.raina.uitemplates.userRegisterWizard.UserIdProofFragment"
         android:label="@string/id_proof"
         tools:layout="@layout/frag_user_id_proof" />
+
 </navigation>
